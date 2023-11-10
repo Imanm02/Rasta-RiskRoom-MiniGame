@@ -122,23 +122,25 @@ if __name__ == '__main__':
     def handle_click(idx):
         def clicker(event):
             global q_index, choices, base_chance, base_multiplier
+            # Check if the chosen answer is correct
             if not questions[q_index].answer(choices[idx]):
+                # Wrong answer: show error and quit the game
                 mb.showerror('باختی', 'تمام امتیازت رو از دست دادی.')
                 window.quit()
             else:
+                # Correct answer: proceed with the game
                 is_quit = False
                 if q_index < len(questions) - 1:
                     q_index += 1
                     lbl_txt.set(f'{q_index+1}. {questions[q_index].question}')
-                    choices = [i for i in range(
-                        len(questions[q_index].choices))]
+                    choices = [i for i in range(len(questions[q_index].choices))]
                     random.shuffle(choices)
-                    q_choices = [questions[q_index].choices[i]
-                                 for i in choices]
+                    q_choices = [questions[q_index].choices[i] for i in choices]
                     for i in range(len(btns)):
                         btns_txt[i].set(q_choices[i])
                 else:
                     is_quit = True
+
                 if base_chance:
                     base_chance += base_chance * (1. / 3.)
                 else:
