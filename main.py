@@ -141,13 +141,17 @@ if __name__ == '__main__':
                 else:
                     is_quit = True
 
+                # Calculate the new chance of winning
                 if base_chance:
                     base_chance += base_chance * (1. / 3.)
                 else:
                     base_chance = 1. / 3.
+
+                # Ensure the chance does not exceed 70%
                 if base_chance > 0.7:
                     base_multiplier *= base_chance / 0.7
                     base_chance = 0.7
+
                 if not is_quit:
                     is_quit = mb.askyesno('خروج از بازی',
                         f'شانس شما {base_chance * 100:.3f}% است. آيا ميخواهيد خارج شويد؟')
