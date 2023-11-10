@@ -168,10 +168,13 @@ if __name__ == '__main__':
                     return "break"
         return clicker
     
+    # Create buttons for each choice
     for idx, q_ch in enumerate(q_choices):
         btns_txt.append(tk.StringVar())
         btns_txt[idx].set(q_choices[idx])
         btns.append(tk.Button(textvariable=btns_txt[idx], font=("IRANYekan", 24)))
         btns[idx].bind('<Button-1>', handle_click(idx))
         btns[idx].pack()
+
+    # Start the Tkinter event loop
     window.mainloop()
