@@ -35,3 +35,6 @@ This repository contains the source code for a quiz game developed for the Rasta
 ### Randomness and Odds Calculation
 - The `random` library is used to shuffle questions and calculate the winning odds.
 - The winning chance starts at 1/3 and increases with each correct answer, with a cap of 70%.
+
+## Maintainer
+- [Iman Mohammadi](https://github.com/Imanm02)
