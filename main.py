@@ -152,9 +152,11 @@ if __name__ == '__main__':
                     base_multiplier *= base_chance / 0.7
                     base_chance = 0.7
 
+                # Ask the player if they want to quit or continue
                 if not is_quit:
-                    is_quit = mb.askyesno('خروج از بازی',
-                        f'شانس شما {base_chance * 100:.3f}% است. آيا ميخواهيد خارج شويد؟')
+                    is_quit = mb.askyesno('خروج از بازی', f'شانس شما {base_chance * 100:.3f}% است. آيا ميخواهيد خارج شويد؟')
+
+                # Final chance calculation and game ending
                 if is_quit:
                     if random.uniform(0, 1) < base_chance:
                         mb.showinfo('بردی', f'امتیازت {base_multiplier:.3f} برابر شد.')
@@ -165,6 +167,7 @@ if __name__ == '__main__':
                 else:
                     return "break"
         return clicker
+    
     for idx, q_ch in enumerate(q_choices):
         btns_txt.append(tk.StringVar())
         btns_txt[idx].set(q_choices[idx])
