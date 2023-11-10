@@ -113,7 +113,8 @@ if __name__ == '__main__':
     lbl = tk.Label(textvariable=lbl_txt, font=("IRANYekan", 28))
     lbl_txt.set(f'{q_index+1}. {questions[0].question}')
     lbl.pack()
-    
+
+    # Randomize the choices for the first question
     choices = [i for i in range(len(questions[q_index].choices))]
     random.shuffle(choices)
     q_choices = [questions[q_index].choices[i] for i in choices]
