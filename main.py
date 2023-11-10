@@ -2,7 +2,6 @@ import random
 import tkinter as tk
 from tkinter import messagebox as mb
 
-
 class Question:
     def __init__(self, question: str, choices: list[str], right_choice=0):
         self.question = question
@@ -11,7 +10,6 @@ class Question:
 
     def answer(self, choice: int):
         return choice == self.right_choice
-
 
 if __name__ == '__main__':
     window = tk.Tk()
