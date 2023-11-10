@@ -7,3 +7,10 @@ This repository contains the source code for a quiz game developed for the Rasta
 - Dynamic odds calculation based on answers
 - Graphical user interface using Tkinter
 
+## How to Play
+- The game presents a series of multiple-choice questions.
+- Select the correct answer by clicking on the choice.
+- A wrong answer ends the game.
+- After each correct answer, the player can choose to continue or end the game.
+- The winning chance increases with each correct answer, up to a maximum of 70%.
+- If the player chooses to end the game, a random draw determines if they win based on their accumulated odds.
