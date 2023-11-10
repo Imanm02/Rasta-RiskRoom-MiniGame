@@ -154,7 +154,7 @@ if __name__ == '__main__':
 
                 # Ask the player if they want to quit or continue
                 if not is_quit:
-                    is_quit = mb.askyesno('خروج از بازی', f'شانس شما {base_chance * 100:.3f}% است. آيا ميخواهيد خارج شويد؟')
+                    is_quit = mb.askyesno('خروج از بازی', f'شانس شما {base_chance * 100:.3f}% است. آيا مي‌خواهيد خارج شويد؟')
 
                 # Final chance calculation and game ending
                 if is_quit:
