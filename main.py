@@ -97,12 +97,17 @@ if __name__ == '__main__':
             'نمیتوان تعیین کرد.',
         ], 1),
     ]
-    base_chance = 0
-    base_multiplier = 2
-    q_index = 0
-    btns = []
-    btns_txt = []
+    
+    # Initial variables for the game logic
+    base_chance = 0  # Initial chance of winning
+    base_multiplier = 2  # Multiplier for scoring
+    q_index = 0  # Index to track the current question
+    btns = []  # List to hold the button widgets
+    btns_txt = []  # List to hold the text variables for the buttons
+
+    # Shuffle the questions to randomize their order
     random.shuffle(questions)
+
     lbl_txt = tk.StringVar()
     lbl = tk.Label(textvariable=lbl_txt, font=("IRANYekan", 28))
     lbl_txt.set(f'{q_index+1}. {questions[0].question}')
