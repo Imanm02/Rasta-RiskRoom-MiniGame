@@ -14,8 +14,11 @@ class Question:
         return choice == self.right_choice
 
 
+# Main execution block
 if __name__ == '__main__':
+    # Create the main window using Tkinter
     window = tk.Tk()
+
     questions = [
         Question('در مورد تاثیر غلظت سرب در خون بر افزایش میزان خشونت کدام مورد درست است؟', [
             'کاهش غلظت سرب در هوا  قطعا باعث کاهش نرخ جرم و خشونت می شود.',
