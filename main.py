@@ -9,8 +9,10 @@ class Question:
         self.choices = choices
         self.right_choice = right_choice
 
+    # Checks if the given choice is the correct answer
     def answer(self, choice: int):
         return choice == self.right_choice
+
 
 if __name__ == '__main__':
     window = tk.Tk()
