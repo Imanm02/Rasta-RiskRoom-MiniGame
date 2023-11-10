@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import messagebox as mb
 
 class Question:
+    # Initializes a question with the question text, choices, and the index of the correct answer
     def __init__(self, question: str, choices: list[str], right_choice=0):
         self.question = question
         self.choices = choices
